@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUBG: BATTLEGROUNDS</title>
+    <link rel="stylesheet" href="./Styles/header.css"/>
+    <link rel="stylesheet" href="./Styles/main.css"/>
+ </head>
+<style>
+</style>
+<body>
+    <div class="main">
+    <nav class="navbar">
+        <div class="nav-section1">
+            <div class="nav1" onclick="handleleftopen()">
+            <svg  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="2" cy="13" r="2" fill="#fff"></circle>
+                <circle cx="2" cy="20" r="2" fill="#fff"></circle>
+                <circle cx="2" cy="27" r="2" fill="#fff"></circle>
+                <path d="M17 29a1.93 1.93 0 0 1-1.413-.587A1.928 1.928 0 0 1 15 27V13c0-.55.196-1.021.587-1.413A1.928 1.928 0 0 1 17 11h7v2h-7v14h14v-7h2v7a1.93 1.93 0 0 1-.587 1.413A1.928 1.928 0 0 1 31 29H17Zm4.7-5.3-1.4-1.4 9.3-9.3H26v-2h7v7h-2v-3.6l-9.3 9.3Z" fill="#fff"></path>
+            </svg>
+        </div>
+        <div class="nav2">
+            <img  src="https://wstatic-prod.pubg.com/web/live/main_f31e0ca/img/1de035e.webp" alt="Logo"/>
+        </div>
+        <div class="nav3">
+            <div class="dropdown-section">
+                <img src="./assets/world-icon.png" alt="world"/>
+                <select class="lang-dropdown"> 
+                    <option>English(Global)</option>
+                    <option>German</option>
+                    <option>English(US)</option>
+                </select>
+            </div>
+            <div class="login-section">
+                <img class="person-icon" src="./assets/person-icon.png" alt="person">
+                <p>Log-In</p>
+            </div>
+            <div class="Play-button-section"> 
+                <button class="Play-button">PLAY NOW</button>
+            </div>
+            <a class="menu-button" onclick="handlemenu()"><img src="./assets/pubg-menu-icon.png" alt="menu-logo"/></a>
+        </div>
+        </div>
+        <div class="nav-section2">
+            <ul class="nav-links">
+                <div class="info" onclick="handledropdown('info-dropdown','info-triangle')">
+                    <li>GAME INFO</li>
+                    <img class=" triangle-img info-triangle" src="./assets/triangle.png"/>
+                    <div class="custom-dropdown info-dropdown">
+                        <ul class="custom-dropdown-ul">
+                            <li>OVERVIEW</li>
+                            <li>MAP</li>
+                            <li>WEAPONS</li>
+                            <li>CUSTOMS</li>
+                        </ul>
+                    </div>
+                </div>
+                <li>NEWS</li>
+                 <div class="info" onclick="handledropdown('event-dropdown','event-triangle')">
+                    <li>Event</li>
+                    <img class="triangle-img event-triangle" src="./assets/triangle.png"/>
+                    <div class="custom-dropdown event-dropdown">
+                        <ul class="custom-dropdown-ul">
+                            <li>EVENT NEWS</li>
+                            <li>Use redeem code</li>
+                        </ul>
+                    </div>
+                </div>
+                <li>MEDIA</li>
+                <li>COMMUNITY</li>
+                <div class="info" onclick="handledropdown('support-dropdown','support-triangle')">
+                    <li>SUPPORT</li>
+                    <img class="triangle-img support-triangle" src="./assets/triangle.png"/>
+                    <div class="custom-dropdown support-dropdown">
+                        <ul class="custom-dropdown-ul">
+                            <li>Epic Games</li>
+                            <li>Steam</li>
+                            <li>PlayStore</li>
+                            <li>App Store</li>
+                        </ul>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <div class="right-side-menu">
+            <div class="right1">
+                <img class="right-logo" src="https://wstatic-prod.pubg.com/web/live/main_f31e0ca/img/1de035e.webp" alt="logo"/>
+                <div class="right-button">
+                    <div class="right-lang-dropdown">
+                         <img src="./assets/world-icon.png" alt="world"/>
+                            <select class="lang-dropdown"> 
+                            <option>English(Global)</option>
+                            <option>German</option>
+                            <option>English(US)</option>
+                             </select>
+                         </div>
+                    <a class="right-close-button" onclick="handleclose()"><img src="./assets/Close-menu.png" alt="close-logo"/></a>
+            </div>
+        </div>
+        <div class="right2">
+            <button class="right-login-button">
+                KRAFTON ID log-in
+      </button>
+        </div>
+        <div class="right3">
+            <div onclick="handledropdown('right-info-dropdown','right-info-triangle')" class="right-dropdown">
+                <p>GAME INFO</p>
+                <img class="triangle-img right-info-triangle" src="./assets/triangle.png"/>
+            </div>
+             <div class="custom-right-dropdown right-info-dropdown">
+                        <ul class="custom-dropdown-ul">
+                            <li>OVERVIEW</li>
+                            <li>MAP</li>
+                            <li>WEAPONS</li>
+                            <li>CUSTOMS</li>
+                        </ul>
+            </div>
+             <div class="right-dropdown right-info-dropdown">
+                <p>NEWS</p>
+            </div>
+            <div onclick="handledropdown('right-event-dropdown','right-event-triangle')" class="right-dropdown">
+                <p>EVENTS</p>
+                <img class="triangle-img right-event-triangle" src="./assets/triangle.png"/>
+            </div>
+             <div class="custom-right-dropdown right-event-dropdown">
+                        <ul class="custom-dropdown-ul">
+                            <li>Epic Games</li>
+                            <li>Steam</li>
+                            <li>PlayStore</li>
+                            <li>App Store</li>
+                        </ul>
+            </div>
+             <div class="right-dropdown right-info-dropdown">
+                <p>MEDIA</p>
+            </div>
+            <div class="right-dropdown right-info-dropdown">
+                <p>COMMUNITY</p>
+            </div>
+            <div onclick="handledropdown('right-support-dropdown','right-support-triangle')" class="right-dropdown">
+                <p>SUPPORTS</p>
+                <img class="triangle-img right-support-triangle" src="./assets/triangle.png"/>
+            </div>
+             <div class="custom-right-dropdown right-support-dropdown">
+                        <ul class="custom-dropdown-ul">
+                            <li>OVERVIEW</li>
+                            <li>MAP</li>
+                        </ul>
+            </div>
+        </div>
+        <div class="right4">
+            <h1 class="right4-title">PLAY NOW</h1>
+            <div class="group-button">
+                <button class="right-buttom-button steam-button">Steam</button>
+                 <button class="right-buttom-button steam-button">Epic games</button>
+                  <button class="right-buttom-button steam-button">Play Store</button>
+                   <button class="right-buttom-button steam-button">App Store</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="left-sidebar-menu">
+        <div class="left1">
+             <h1>LEARN MORE PUBG</h1>
+            <img onclick="handleleftclose()" src="./assets/Close-menu.png" alt="left-close"/>
+        </div>
+        <div class="left3">
+            <div class="left-card">
+                <img src="https://wstatic-prod.pubg.com/web/live/main_f31e0ca/img/bff06a5.webp" alt="krafton-id">
+            </div>
+             <div class="left-card">
+                <img src="https://wstatic-prod.pubg.com/web/live/main_f31e0ca/img/4993584.webp" alt="shop">
+            </div>
+             <div class="left-card">
+                <img src="https://wstatic-prod.pubg.com/web/live/main_f31e0ca/img/e9ec59e.webp" alt="esports">
+            </div>
+             <div class="left-card">
+                <img src="https://wstatic-prod.pubg.com/web/live/main_f31e0ca/img/84e909d.webp" alt="pubg-api">
+            </div>
+             <div class="left-card">
+                <img src="https://wstatic-prod.pubg.com/web/live/main_f31e0ca/img/23647c3.webp" alt="krafton">
+            </div>
+             <div class="left-card">
+                <img src="https://wstatic-prod.pubg.com/web/live/main_f31e0ca/img/56c6167.webp" alt="press">
+            </div>
+        </div>
+    </div>
+    </nav>
+    <div class="main-content">
+        <div class="section1">
+            <img class="back-image"  src="https://wstatic-prod.pubg.com/web/live/main_f31e0ca/img/1337804.webp"  alt="PUBG: BATTLEGROUNDS" >
+            <div class="section1-contents">
+                <div class="content1">
+                   <h1> PUBG: BATTLEGROUNDS</h1>
+                </div>
+                <div class="content2">
+                    LAND, LOOT, SURVIVE! <br> Play PUBG: BATTLEGROUNDS for free.
+                </div>
+               <div class="content3">
+                 <button class="section1-content-button">Steam</button>
+                 <button class="section1-content-button">Epic Games</button>
+                 <button class="section1-content-button">Play Station</button>
+                 <button class="section1-content-button">Xbox</button>
+               </div>
+               <button class="section1-button">PLAY NOW</button>
+            </div>
+        </div>
+        <div class="section2">
+            <div class="section2-cards">
+                <div  class="card-section1">
+                    <div class="card-tittle">
+                        <h1>PATCH NOTES</h1> 
+                        <svg  width="32" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="15.5" stroke="#fff">
+                            </circle><path fill="#fff" d="M1 15h17v2H1z">
+                            </path><path stroke="#fff" stroke-width="2" d="m18.293 16.707-6-6m6.414 5L12.414 22">
+                            </path></svg>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-button">
+                            <button>PC</button>
+                            <button>console</button>
+                        </div>
+                        <h3 class="patch-tittle">Patch Notes-Update 35.2</h3>
+                        <p class="patch-notes">Introducing Update 35.2: Discover all the latest features and improvements!</p>
+                    </div>
+                </div>
+                <div class="card-section2">
+                    <iframe class="update-video" src="https://www.youtube.com/embed/b2oIdTfTq9w" title="Patch Report #35.2 | Destructible Terrain on Taego, Vending Machines, and Vehicle Camo Netting" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="section3">
+            <div class="section3-news">
+                <div class="setion3-news-header">
+                    <h3>NEWS</h3>
+                    <svg   width="32" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle  cx="16" cy="16" r="15.5" stroke="black">
+                            </circle><path fill="black" d="M1 15h17v2H1z">
+                            </path><path stroke="black" stroke-width="2" d="m18.293 16.707-6-6m6.414 5L12.414 22">
+                            </path>
+                    </svg>
+                </div>
+                <div class="section3-news-grid">
+                    <div class="section3-news-slider">
+                        <div class="section3-news-cards">
+                            <div class="news1">
+                                <img src="https://wstatic-prod-boc.krafton.com/common/content/news/20250610/r20Y3MMZ_thumb.jpg" alt="news-image"> 
+                            </div>
+                            <div class="news2">
+                                <div class="card-button">
+                                    <button>PC</button>
+                                    <button>console</button>
+                                </div>
+                                <h3 class="news-tittle">BLACK-MARKET 2024</h3>
+                                <p class="news-notes">Originality returns in Black Market 2025 with an array of returning Progressive weapon skins and outfits, along with exciting new additions!</p>
+                                <div class="news-bottom">
+                                    <p class="news-bottom1">ANNOUNCEMENT</p>
+                                    <p class="news-bottom2">2025.06.01</p>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="section3-news-cards">
+                            <div class="news1">
+                                <img src="https://wstatic-prod-boc.krafton.com/common/content/news/20250604/65qGX4NV_thumb.jpg" alt="news-image"> 
+                            </div>
+                            <div class="news2">
+                                <div class="card-button">
+                                    <button>PC</button>
+                                    <button>console</button>
+                                </div>
+                                <h3 class="news-tittle">BLACK-MARKET 2024</h3>
+                                <p class="news-notes">Originality returns in Black Market 2025 with an array of returning Progressive weapon skins and outfits, along with exciting new additions!</p>
+                                <div class="news-bottom">
+                                    <p class="news-bottom1">ANNOUNCEMENT</p>
+                                    <p class="news-bottom2">2025.06.01</p>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="section3-news-cards">
+                            <div class="news1">
+                                <img src="https://wstatic-prod-boc.krafton.com/common/content/news/20250609/3947btko_thumb.jpg" alt="news-image"> 
+                            </div>
+                            <div class="news2">
+                                <div class="card-button">
+                                    <button>PC</button>
+                                    <button>console</button>
+                                </div>
+                                <h3 class="news-tittle">BLACK-MARKET 2024</h3>
+                                <p class="news-notes">Originality returns in Black Market 2025 with an array of returning Progressive weapon skins and outfits, along with exciting new additions!</p>
+                                <div class="news-bottom">
+                                    <p class="news-bottom1">ANNOUNCEMENT</p>
+                                    <p class="news-bottom2">2025.06.01</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="section3-events">
+                <div class="events1">
+                    <h3 class="event-tittle">EVENTS</h3>
+                      <svg   width="32" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle  cx="16" cy="16" r="15.5" stroke="black">
+                            </circle><path fill="black" d="M1 15h17v2H1z">
+                            </path><path stroke="black" stroke-width="2" d="m18.293 16.707-6-6m6.414 5L12.414 22">
+                            </path>
+                    </svg>
+                </div>
+                <div class="events2">
+                        <div class="events-slider">
+                            <div class="events-cards">
+                                <div class="event-card-header">
+                                    <img src="https://wstatic-prod-boc.krafton.com/common/content/events/20250605/u7jTFYYt_thumb.jpg" alt="event-image">
+                                </div>
+                                <div class="event-card-content">
+                                    <div class="card-button">
+                                    <button>PC</button>
+                                    <button>console</button>
+                                    <h2>Special Drops-June 2025</h2>
+                                </div>
+                                    <div class="news-bottom">
+                                    <p class="news-bottom1">EVENT</p>
+                                    <p class="news-bottom2">2025.06.01</p>
+                                </div>
+                                </div>
+                            </div>
+                             <div class="events-cards">
+                                <div class="event-card-header">
+                                    <img src="https://wstatic-prod-boc.krafton.com/common/content/events/20250610/Jd2r2li5_thumb.jpg" alt="event-image">
+                                </div>
+                                <div class="event-card-content">
+                                    <div class="card-button">
+                                    <button>PC</button>
+                                    <button>console</button>
+                                    <h2>Special Drops-June 2025</h2>
+                                </div>
+                                    <div class="news-bottom">
+                                    <p class="news-bottom1">EVENT</p>
+                                    <p class="news-bottom2">2025.06.01</p>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+        <div class="section4">
+            <div class="section4-content">
+                <h1 class="section4-title">SHOP</h1>
+                <h4 class="section4-parah"> Shop for PUBG merchandise with various apparel,accessories, and more!</h4>
+            </div>
+            <div class="section4-image">
+                <img src="https://wstatic-prod.pubg.com/web/live/main_f31e0ca/img/cd236ef.webp"  alt="section4-banner"/>
+            </div>
+        </div>
+        <div class="section5">
+            <div class="section5-content">
+                <h1 class="section5-tittle">COMMUNITY</h1>
+                <svg  width="32" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="15.5" stroke="#fff">
+                            </circle><path fill="#fff" d="M1 15h17v2H1z">
+                            </path><path stroke="#fff" stroke-width="2" d="m18.293 16.707-6-6m6.414 5L12.414 22">
+                            </path></svg>
+            </div>
+            <div class="section5-grid">
+                <div class="section5-slider">
+                <div class="section5-cards">
+                    <div class="section5-header">
+                        <div class="section5-header1">
+                            <img src="https://media-api.flockler.com/twitter/profile_image/719324795167309827?rh=21b3c1c268d92d4222eadf64892682e832f22a4ed70a569360127c210472019e" alt="com-icon"/>
+                            <div class="section5-header-content">
+                                <h5 class="section5-con1">PUBG: BATTLEGROUNDS</h5>
+                                <h6 class="section5-con2">@PUBG</h6>
+                            </div>
+                        </div>
+                        <div class="section5-header2">
+                            <svg  class="section5-x" aria-hidden="true" viewBox="-250 -250 1700 1700" class="flockler-wall_v2-item__context__icon"><path fill="currentColor" d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"></path></svg>
+                        </div>
+                    </div>
+                    <div  class="section5-content-vid">
+                        <video preload="metadata" src="https://media-api.flockler.com/twitter/video/1930576634467246229?rh=a92288edb837e970acba63b7531f61a23b044fa5fb14d18103d16a75534482b4" 
+                        data-src="https://media-api.flockler.com/twitter/video/1930576634467246229?rh=a92288edb837e970acba63b7531f61a23b044fa5fb14d18103d16a75534482b4" loop="" playsinline=""
+                         poster="https://media-api.flockler.com/twitter/image/1930576634467246229?rh=33346df2e6d72733c37d77d0d90649c3cb00c03eb8fc370f455c0d8fa27a3847" 
+                        class="section5-vid"></video>
+                    </div>
+                    <div  style="width:100%;height:20%; padding:20px; background-color: white;" class="section5-content2">
+                        <p  style="color: #000;">Well...that one way to get kill </p>
+                        <div style="color:#716f6f;" class="section5-con2-content">
+                            <p>4days ag0</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section5-cards">
+                    <div class="section5-header">
+                        <div class="section5-header1">
+                            <img src="https://media-api.flockler.com/twitter/profile_image/719324795167309827?rh=21b3c1c268d92d4222eadf64892682e832f22a4ed70a569360127c210472019e" alt="com-icon"/>
+                            <div class="section5-header-content">
+                                <h5 class="section5-con1">PUBG: BATTLEGROUNDS</h5>
+                                <h6 class="section5-con2">@PUBG</h6>
+                            </div>
+                        </div>
+                        <div class="section5-header2">
+                            <svg  class="section5-x" aria-hidden="true" viewBox="-250 -250 1700 1700" class="flockler-wall_v2-item__context__icon"><path fill="currentColor" d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"></path></svg>
+                        </div>
+                    </div>
+                    <div  class="section5-content-vid">
+                        <video preload="metadata" src="https://media-api.flockler.com/twitter/video/1930576634467246229?rh=a92288edb837e970acba63b7531f61a23b044fa5fb14d18103d16a75534482b4" 
+                        data-src="https://media-api.flockler.com/twitter/video/1930576634467246229?rh=a92288edb837e970acba63b7531f61a23b044fa5fb14d18103d16a75534482b4" loop="" playsinline=""
+                         poster="https://media-api.flockler.com/twitter/image/1930576634467246229?rh=33346df2e6d72733c37d77d0d90649c3cb00c03eb8fc370f455c0d8fa27a3847" 
+                        class="section5-vid"></video>
+                    </div>
+                    <div  style="width:100%;height:20%; padding:20px; background-color: white;" class="section5-content2">
+                        <p  style="color: #000;">Well...that one way to get kill </p>
+                        <div style="color:#716f6f;" class="section5-con2-content">
+                            <p>4days ag0</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section5-cards">
+                    <div class="section5-header">
+                        <div class="section5-header1">
+                            <img src="https://media-api.flockler.com/twitter/profile_image/719324795167309827?rh=21b3c1c268d92d4222eadf64892682e832f22a4ed70a569360127c210472019e" alt="com-icon"/>
+                            <div class="section5-header-content">
+                                <h5 class="section5-con1">PUBG: BATTLEGROUNDS</h5>
+                                <h6 class="section5-con2">@PUBG</h6>
+                            </div>
+                        </div>
+                        <div class="section5-header2">
+                            <svg  class="section5-x" aria-hidden="true" viewBox="-250 -250 1700 1700" class="flockler-wall_v2-item__context__icon"><path fill="currentColor" d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"></path></svg>
+                        </div>
+                    </div>
+                    <div  class="section5-content-vid">
+                        <video preload="metadata" src="https://media-api.flockler.com/twitter/video/1930233167392194883?rh=3dd675fa4791fc8ea1098307bf10f54508c539f447b7558818a0668df0d2c3cd" 
+                        data-src="https://media-api.flockler.com/twitter/video/1930576634467246229?rh=a92288edb837e970acba63b7531f61a23b044fa5fb14d18103d16a75534482b4" loop="" playsinline=""
+                         poster="https://media-api.flockler.com/twitter/image/1930576634467246229?rh=33346df2e6d72733c37d77d0d90649c3cb00c03eb8fc370f455c0d8fa27a3847" 
+                        class="section5-vid"></video>
+                    </div>
+                    <div  style="width:100%; padding:20px; background-color: white;" class="section5-content2">
+                        <p  style="color: #000;">Well...that one way to get kill </p>
+                        <div style="color:#716f6f;" class="section5-con2-content">
+                            <p>4days ag0</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer__social" >
+                <span class="footer__social-list" data-v-a53512bc="">
+                 <a href="https://www.facebook.com/pubg.battlegrounds.global" target="_blank" aria-label="facebook" class="footer__social-items" data-v-a53512bc="">
+                <span class="base-svg footer__social-icon base-svg--icon-facebook base-svg--ltr footer__social-icon--facebook" data-v-33b99aba="" data-v-a53512bc="">
+                <span class="base-svg__icon" style="" data-v-33b99aba="">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="8" fill="#1877F2"></rect>
+                        <g clip-path="url(#clip0_5_554)">
+                            <path d="M29 20a9 9 0 1 0-18 0c0 4.492 3.291 8.215 7.594 8.89v-6.288h-2.285V20h2.285v-1.983c0-2.255 1.343-3.501 3.4-3.501.984 0 2.014.175 2.014.175v2.215h-1.135c-1.118 0-1.467.694-1.467 1.407V20h2.496l-.399 2.602h-2.097v6.289A9.002 9.002 0 0 0 29 20Z" fill="#fff"></path>
+                        </g><defs><clipPath id="clip0_5_554"><path fill="#fff" transform="translate(11 11)" d="M0 0h18v18H0z"></path>
+                        </clipPath></defs></svg></span></span> 
+                        <span class="base-svg footer__social-icon footer__social-icon--hover base-svg--icon-facebook-hover base-svg--ltr footer__social-icon--facebook" data-v-33b99aba="" data-v-a53512bc="">
+                            <span class="base-svg__icon" style="" data-v-33b99aba=""><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="40" height="40" rx="8" fill="#fff"></rect>
+                                <g clip-path="url(#clip0_30_2926)">
+                                    <path d="M29 20a9 9 0 1 0-18 0c0 4.492 3.291 8.215 7.594 8.89v-6.288h-2.285V20h2.285v-1.983c0-2.255 1.343-3.501 3.4-3.501.984 0 2.014.175 2.014.175v2.215h-1.135c-1.118 0-1.467.694-1.467 1.407V20h2.496l-.399 2.602h-2.097v6.289A9.002 9.002 0 0 0 29 20Z" fill="#1877F2"></path>
+                                </g><defs><clipPath id="clip0_30_2926"><path fill="#fff" transform="translate(11 11)" d="M0 0h18v18H0z"></path>
+                                </clipPath></defs></svg></span></span></a><a href="https://twitter.com/PUBG" target="_blank" aria-label="twitter" class="footer__social-items" data-v-a53512bc="">
+                                    <span class="base-svg footer__social-icon base-svg--icon-twitter-gray base-svg--ltr footer__social-icon--twitter" data-v-33b99aba="" data-v-a53512bc="">
+                                        <span class="base-svg__icon" style="" data-v-33b99aba=""><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x=".5" y=".5" width="39" height="39" rx="7.5" stroke="#fff" stroke-opacity=".5"></rect><g clip-path="url(#clip0_11792_32200)"><path d="M21.494 18.63 28.058 11h-1.555l-5.7 6.625L16.25 11H11l6.884 10.019L11 29.02h1.556l6.019-6.996 4.807 6.996h5.25l-7.138-10.39Zm-2.13 2.477-.698-.998-5.55-7.938h2.39l4.478 6.406.697.998 5.822 8.327h-2.389l-4.75-6.795Z" fill="#fff"></path></g><defs><clipPath id="clip0_11792_32200"><path fill="#fff" transform="translate(11 11)" d="M0 0h18v18H0z"></path></clipPath></defs></svg></span></span>
+                                         <span class="base-svg footer__social-icon footer__social-icon--hover base-svg--icon-twitter-hover base-svg--ltr footer__social-icon--twitter" data-v-33b99aba="" data-v-a53512bc=""><span class="base-svg__icon" style="" data-v-33b99aba=""><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="40" height="40" rx="8" fill="#fff"></rect><g clip-path="url(#clip0_11792_32204)"><path d="M21.494 18.63 28.058 11h-1.555l-5.7 6.625L16.25 11H11l6.884 10.019L11 29.02h1.556l6.019-6.996 4.807 6.996h5.25l-7.138-10.39Zm-2.13 2.477-.698-.998-5.55-7.938h2.39l4.478 6.406.697.998 5.822 8.327h-2.389l-4.75-6.795Z" fill="#000"></path></g><defs><clipPath id="clip0_11792_32204"><path fill="#fff" transform="translate(11 11)" d="M0 0h18v18H0z"></path></clipPath></defs></svg></span></span></a><a href="https://www.youtube.com/channel/UCnXDQbqIdp-HQuDyM4p12ng" target="_blank" aria-label="youtube" class="footer__social-items" data-v-a53512bc=""><span class="base-svg footer__social-icon base-svg--icon-youtube base-svg--ltr footer__social-icon--youtube" data-v-33b99aba="" data-v-a53512bc=""><span class="base-svg__icon" style="" data-v-33b99aba=""><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="8" fill="red"></rect><path d="M28.82 16.4s-.175-1.24-.716-1.786c-.686-.717-1.452-.72-1.804-.763-2.517-.183-6.297-.183-6.297-.183h-.006s-3.78 0-6.297.183c-.352.042-1.118.046-1.803.763-.542.545-.714 1.786-.714 1.786S11 17.86 11 19.315v1.364c0 1.455.18 2.914.18 2.914s.175 1.241.713 1.786c.685.717 1.585.693 1.986.77 1.442.137 6.121.18 6.121.18s3.783-.008 6.3-.187c.352-.042 1.118-.046 1.803-.763.542-.545.718-1.786.718-1.786S29 22.138 29 20.68v-1.364c0-1.456-.18-2.915-.18-2.915Zm-10.68 5.934v-5.058l4.862 2.538-4.862 2.52Z" fill="#fff"></path></svg></span></span> <span class="base-svg footer__social-icon footer__social-icon--hover base-svg--icon-youtube-hover base-svg--ltr footer__social-icon--youtube" data-v-33b99aba="" data-v-a53512bc=""><span class="base-svg__icon" style="" data-v-33b99aba=""><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="8" fill="#fff"></rect><path d="M28.82 16.4s-.175-1.24-.716-1.786c-.686-.717-1.452-.72-1.804-.763-2.517-.183-6.297-.183-6.297-.183h-.006s-3.78 0-6.297.183c-.352.042-1.118.046-1.803.763-.542.545-.714 1.786-.714 1.786S11 17.86 11 19.315v1.364c0 1.455.18 2.914.18 2.914s.175 1.241.713 1.786c.685.717 1.585.693 1.986.77 1.442.137 6.121.18 6.121.18s3.783-.008 6.3-.187c.352-.042 1.118-.046 1.803-.763.542-.545.718-1.786.718-1.786S29 22.138 29 20.68v-1.364c0-1.456-.18-2.915-.18-2.915Zm-10.68 5.934v-5.058l4.862 2.538-4.862 2.52Z" fill="red"></path></svg></span></span></a><a href="https://www.instagram.com/pubg_battlegrounds_global/" target="_blank" aria-label="instagram" class="footer__social-items" data-v-a53512bc=""><span class="base-svg footer__social-icon base-svg--icon-instagram base-svg--ltr footer__social-icon--instagram" data-v-33b99aba="" data-v-a53512bc=""><span class="base-svg__icon" style="" data-v-33b99aba=""><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect width="40" height="40" rx="8" fill="url(#icon-instagram-pattern)"></rect><g clip-path="url(#clip0_5_572)"><g clip-path="url(#clip1_5_572)" fill="#fff"><path d="M20 12.62c2.405 0 2.69.011 3.635.053.88.04 1.354.187 1.67.31.418.162.72.358 1.034.671.316.317.51.616.671 1.034.123.316.27.794.31 1.67.042.949.052 1.234.052 3.635 0 2.405-.01 2.69-.052 3.635-.04.879-.187 1.354-.31 1.67-.162.418-.358.72-.671 1.034-.317.316-.616.51-1.034.671-.316.123-.794.27-1.67.31-.95.042-1.234.052-3.635.052-2.405 0-2.69-.01-3.635-.052-.88-.04-1.354-.187-1.67-.31a2.784 2.784 0 0 1-1.034-.671 2.769 2.769 0 0 1-.671-1.034c-.123-.316-.27-.794-.31-1.67-.042-.95-.052-1.234-.052-3.635 0-2.405.01-2.69.053-3.635.038-.88.186-1.354.309-1.67.162-.418.358-.72.671-1.034.317-.316.616-.51 1.034-.671.316-.123.794-.27 1.67-.31.946-.042 1.23-.052 3.635-.052ZM20 11c-2.443 0-2.75.01-3.709.053-.956.042-1.614.197-2.183.418a4.393 4.393 0 0 0-1.596 1.04 4.41 4.41 0 0 0-1.04 1.593c-.222.573-.377 1.227-.42 2.184C11.012 17.25 11 17.556 11 20c0 2.443.01 2.75.053 3.709.042.956.197 1.614.418 2.183a4.393 4.393 0 0 0 1.04 1.596 4.4 4.4 0 0 0 1.593 1.037c.573.222 1.227.377 2.184.419.96.042 1.265.053 3.709.053 2.443 0 2.749-.011 3.709-.053.956-.042 1.613-.197 2.183-.419a4.4 4.4 0 0 0 1.592-1.037 4.4 4.4 0 0 0 1.037-1.592c.222-.573.377-1.227.419-2.184.042-.96.052-1.265.052-3.709 0-2.443-.01-2.749-.052-3.709-.043-.956-.197-1.613-.419-2.183a4.216 4.216 0 0 0-1.03-1.6 4.4 4.4 0 0 0-1.592-1.036c-.573-.222-1.227-.377-2.184-.419C22.75 11.011 22.444 11 20 11Z">
+            </path><path d="M20 15.377a4.624 4.624 0 0 0 0 9.246 4.624 4.624 0 0 0 0-9.246Zm0 7.622A3 3 0 1 1 20 17a3 3 0 0 1 0 6Zm5.885-7.805a1.08 1.08 0 1 1-2.159 0 1.08 1.08 0 0 1 2.16 0Z"></path></g></g><defs><clipPath id="clip0_5_572"><path fill="#fff" transform="translate(11 11)" d="M0 0h18v18H0z"></path></clipPath><clipPath id="clip1_5_572"><path fill="#fff" transform="translate(11 11)" d="M0 0h18v18H0z"></path></clipPath><pattern id="icon-instagram-pattern" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="#icon-instagram-image" transform="scale(.025)"></use></pattern><image id="icon-instagram-image" width="40" height="40" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAIAAAADnC86AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDcuMi1jMDAwIDc5LjFiNjVhNzliNCwgMjAyMi8wNi8xMy0yMjowMTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIzLjUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkE0QTkxQkY4Mjg0QTExRUQ4RjgwQkJEOUMwOTZCNkU4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkE0QTkxQkY5Mjg0QTExRUQ4RjgwQkJEOUMwOTZCNkU4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QTRBOTFCRjYyODRBMTFFRDhGODBCQkQ5QzA5NkI2RTgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QTRBOTFCRjcyODRBMTFFRDhGODBCQkQ5QzA5NkI2RTgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7nemzWAAADFklEQVR42qxXi3LUMAyUEt0dA+UT+Qk+lQ8phU6BGe4sYluxJVl5DHCTSW1Z2l2tkraHnz99gf/0wZSAEzKXRb7jsk1cggkSqy3TWVBmsECyKHB9kQrxSrPSC1k/FeK8Yas3BhqFK+61UYm3rdWxiqB3L8+luCsyWJ3SxVXySiOLTtAEsaasa7q9PEccbXsOmj10GNRHdPv+1RyrnmrQQoxM7JnABkGd5jXUI7q+fjtUtxTsBNctKPRlAQDmqOTXYL7T5e01lCzFeisLaOjytLfFCppz2roKqu9GFVE+dPnx1uX0PqA31CqbVwa0bGXH268jYLm3HJp//cSmpbbVUCr9IDaARQNqyOxvA2HPxPffx6BrTRDvH/ZMsuW2bax5xlgKjsQGoOUWgprOTCb2dEJMkSde7C6oKOuxtRM0ZCoHgaaZY9BILLq0EFQTdyxG1DNimqc0glpcVXMO1JiEurHeBs1zgrGs43ZQ7b8KMg6gOBxpV4r6pWNKx2LRDLL1jTHoxpG1SojxH0HbUTePTT9DM0TzI1QUFKt3GnfjYrsydtRKdEmWb1Wt7EWtw8WVB2ge+I7pGhCriR6gRDkyI9a8Rd5V171TaSwpwaXjx/gIOLK43s3P2Gv9iIK5Y9zpQIMq9E2TNVPkcOuELkvHGA/JmxyZYURrWZG9ar38I3C9j5MLmo6dOO7YyF2dQ+nYzDKa2QBhLYmYfLsediG+HzDh7uAHD08ZkImvjw33+HxnZyIVp3HlGeP2I+AjwUT4oPvObTTRtT5codhD0EHTFs2IVojPmSyRwbd+P9V3kSJWh1PZQzGZwSwmeXmKOq7rfE0S5Nzx7R40aqR4QQIq6Aq3gk6gIv60KchWj6CSNJmyJrZp17hsMzVxeET4lDxoq5n+EjT2WV/LU81P5fvJFOAegVpcgO3ueTyl9JGdFpkf8C5lS/blPDTnk0sO8YdhThA/Gh4UxjX3HAjvxVtcfkzE73mD1eldJwr2SH+twClfGXiSrbzChcxuF+IBVEO3P5m5rIqtBFJfj1Ahaj5cEzRlXf8RYABcamZwbcYQMAAAAABJRU5ErkJggg=="></image></defs></svg></span></span> <span class="base-svg footer__social-icon footer__social-icon--hover base-svg--icon-instagram-hover base-svg--ltr footer__social-icon--instagram" data-v-33b99aba="" data-v-a53512bc=""><span class="base-svg__icon" style="" data-v-33b99aba=""><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="8" fill="#fff"></rect><g clip-path="url(#clip0_30_2934)"><g clip-path="url(#clip1_30_2934)" fill="#B1155A"><path d="M20 12.62c2.405 0 2.69.011 3.635.053.88.04 1.354.187 1.67.31.418.162.72.358 1.034.671.316.317.51.616.671 1.034.123.316.27.794.31 1.67.042.949.052 1.234.052 3.635 0 2.405-.01 2.69-.052 3.635-.04.879-.187 1.354-.31 1.67-.162.418-.358.72-.671 1.034-.317.316-.616.51-1.034.671-.316.123-.794.27-1.67.31-.95.042-1.234.052-3.635.052-2.405 0-2.69-.01-3.635-.052-.88-.04-1.354-.187-1.67-.31a2.784 2.784 0 0 1-1.034-.671 2.769 2.769 0 0 1-.671-1.034c-.123-.316-.27-.794-.31-1.67-.042-.95-.052-1.234-.052-3.635 0-2.405.01-2.69.053-3.635.038-.88.186-1.354.309-1.67.162-.418.358-.72.671-1.034.317-.316.616-.51 1.034-.671.316-.123.794-.27 1.67-.31.946-.042 1.23-.052 3.635-.052ZM20 11c-2.443 0-2.75.01-3.709.053-.956.042-1.614.197-2.183.418a4.393 4.393 0 0 0-1.596 1.04 4.41 4.41 0 0 0-1.04 1.593c-.222.573-.377 1.227-.42 2.184C11.012 17.25 11 17.556 11 20c0 2.443.01 2.75.053 3.709.042.956.197 1.614.418 2.183a4.393 4.393 0 0 0 1.04 1.596 4.4 4.4 0 0 0 1.593 1.037c.573.222 1.227.377 2.184.419.96.042 1.265.053 3.709.053 2.443 0 2.749-.011 3.709-.053.956-.042 1.613-.197 2.183-.419a4.4 4.4 0 0 0 1.592-1.037 4.4 4.4 0 0 0 1.037-1.592c.222-.573.377-1.227.419-2.184.042-.96.052-1.265.052-3.709 0-2.443-.01-2.749-.052-3.709-.043-.956-.197-1.613-.419-2.183a4.216 4.216 0 0 0-1.03-1.6 4.4 4.4 0 0 0-1.592-1.036c-.573-.222-1.227-.377-2.184-.419C22.75 11.011 22.444 11 20 11Z"></path><path d="M20 15.377a4.624 4.624 0 0 0 0 9.246 4.624 4.624 0 0 0 0-9.246Zm0 7.622A3 3 0 1 1 20 17a3 3 0 0 1 0 6Zm5.885-7.805a1.08 1.08 0 1 1-2.159 0 1.08 1.08 0 0 1 2.16 0Z"></path></g></g><defs><clipPath id="clip0_30_2934"><path fill="#fff" transform="translate(11 11)" d="M0 0h18v18H0z"></path></clipPath><clipPath id="clip1_30_2934"><path fill="#fff" transform="translate(11 11)" d="M0 0h18v18H0z"></path></clipPath></defs></svg></span></span></a><a href="https://discord.com/invite/battlegrounds" target="_blank" aria-label="discord" class="footer__social-items" data-v-a53512bc=""><span class="base-svg footer__social-icon base-svg--icon-discord base-svg--ltr footer__social-icon--discord" data-v-33b99aba="" data-v-a53512bc=""><span class="base-svg__icon" style="" data-v-33b99aba=""><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="8" fill="#5865F2"></rect><path d="M26.238 14.387a14.848 14.848 0 0 0-3.664-1.136.056.056 0 0 0-.059.028 10.33 10.33 0 0 0-.456.937 13.705 13.705 0 0 0-4.115 0 9.452 9.452 0 0 0-.464-.937.058.058 0 0 0-.058-.028c-1.286.221-2.516.61-3.664 1.136a.052.052 0 0 0-.024.021c-2.334 3.486-2.973 6.887-2.66 10.245a.062.062 0 0 0 .024.042 14.926 14.926 0 0 0 4.494 2.273.058.058 0 0 0 .064-.021c.346-.473.655-.972.92-1.496a.057.057 0 0 0-.032-.08 9.828 9.828 0 0 1-1.404-.668.058.058 0 0 1-.006-.096c.095-.07.189-.144.279-.219a.056.056 0 0 1 .058-.008c2.946 1.345 6.135 1.345 9.046 0a.056.056 0 0 1 .06.008 7.7 7.7 0 0 0 .279.219.058.058 0 0 1-.005.096 9.228 9.228 0 0 1-1.405.668.057.057 0 0 0-.03.08c.27.524.578 1.022.918 1.495.014.02.04.029.063.021a14.877 14.877 0 0 0 4.502-2.272.058.058 0 0 0 .023-.041c.376-3.883-.628-7.255-2.66-10.245a.046.046 0 0 0-.024-.022Zm-9.223 8.221c-.887 0-1.618-.814-1.618-1.814s.717-1.814 1.618-1.814c.908 0 1.632.821 1.618 1.814 0 1-.717 1.814-1.618 1.814Zm5.981 0c-.887 0-1.618-.814-1.618-1.814s.717-1.814 1.618-1.814c.908 0 1.632.821 1.618 1.814 0 1-.71 1.814-1.618 1.814Z" fill="#fff"></path></svg></span></span> <span class="base-svg footer__social-icon footer__social-icon--hover base-svg--icon-discord-hover base-svg--ltr footer__social-icon--discord" data-v-33b99aba="" data-v-a53512bc=""><span class="base-svg__icon" style="" data-v-33b99aba=""><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="8" fill="#fff"></rect><path d="M26.238 14.387a14.848 14.848 0 0 0-3.664-1.136.056.056 0 0 0-.059.028 10.33 10.33 0 0 0-.456.937 13.705 13.705 0 0 0-4.115 0 9.452 9.452 0 0 0-.464-.937.058.058 0 0 0-.058-.028c-1.286.221-2.516.61-3.664 1.136a.052.052 0 0 0-.024.021c-2.334 3.486-2.973 6.887-2.66 10.245a.062.062 0 0 0 .024.042 14.926 14.926 0 0 0 4.494 2.273.058.058 0 0 0 .064-.021c.346-.473.655-.972.92-1.496a.057.057 0 0 0-.032-.08 9.828 9.828 0 0 1-1.404-.668.058.058 0 0 1-.006-.096c.095-.07.189-.144.279-.219a.056.056 0 0 1 .058-.008c2.946 1.345 6.135 1.345 9.046 0a.056.056 0 0 1 .06.008 7.7 7.7 0 0 0 .279.219.058.058 0 0 1-.005.096 9.228 9.228 0 0 1-1.405.668.057.057 0 0 0-.03.08c.27.524.578 1.022.918 1.495.014.02.04.029.063.021a14.877 14.877 0 0 0 4.502-2.272.058.058 0 0 0 .023-.041c.376-3.883-.628-7.255-2.66-10.245a.046.046 0 0 0-.024-.022Zm-9.223 8.221c-.887 0-1.618-.814-1.618-1.814s.717-1.814 1.618-1.814c.908 0 1.632.821 1.618 1.814 0 1-.717 1.814-1.618 1.814Zm5.981 0c-.887 0-1.618-.814-1.618-1.814s.717-1.814 1.618-1.814c.908 0 1.632.821 1.618 1.814 0 1-.71 1.814-1.618 1.814Z" fill="#5865F2"></path></svg></span></span></a><a href="https://www.tiktok.com/@pubg" target="_blank" aria-label="tiktok" class="footer__social-items" data-v-a53512bc=""><span class="base-svg footer__social-icon base-svg--icon-tiktok base-svg--ltr footer__social-icon--tiktok" data-v-33b99aba="" data-v-a53512bc=""><span class="base-svg__icon" style="" data-v-33b99aba=""><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="8" fill="#FE2C55"></rect><path d="M25.433 14.607A4.304 4.304 0 0 1 23.483 11h-3.084v12.401a2.607 2.607 0 0 1-2.593 2.505 2.603 2.603 0 0 1 0-5.205 2.6 2.6 0 0 1 .766.12v-3.157a5.702 5.702 0 0 0-.766-.056c-3.136 0-5.68 2.557-5.68 5.696 0 1.927.96 3.634 2.421 4.665A5.637 5.637 0 0 0 17.798 29c3.132 0 5.677-2.554 5.677-5.696v-6.289a7.325 7.325 0 0 0 4.29 1.384v-3.094c-.86 0-1.663-.259-2.336-.697h.004Z" fill="#fff"></path></svg></span></span> <span class="base-svg footer__social-icon footer__social-icon--hover base-svg--icon-tiktok-hover base-svg--ltr footer__social-icon--tiktok" data-v-33b99aba="" data-v-a53512bc=""><span class="base-svg__icon" style="" data-v-33b99aba=""><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="8" fill="#fff"></rect><path d="M25.433 14.607A4.304 4.304 0 0 1 23.483 11h-3.084v12.401a2.607 2.607 0 0 1-2.593 2.505 2.603 2.603 0 0 1 0-5.205 2.6 2.6 0 0 1 .766.12v-3.157a5.702 5.702 0 0 0-.766-.056c-3.136 0-5.68 2.557-5.68 5.696 0 1.927.96 3.634 2.421 4.665A5.637 5.637 0 0 0 17.798 29c3.132 0 5.677-2.554 5.677-5.696v-6.289a7.325 7.325 0 0 0 4.29 1.384v-3.094c-.86 0-1.663-.259-2.336-.697h.004Z" fill="#FE2C55"></path></svg></span></span></a><a href="https://www.reddit.com/r/PUBATTLEGROUNDS/" target="_blank" aria-label="reddit" class="footer__social-items" data-v-a53512bc=""><span class="base-svg footer__social-icon base-svg--icon-reddit base-svg--ltr footer__social-icon--reddit" data-v-33b99aba="" data-v-a53512bc=""><span class="base-svg__icon" style="" data-v-33b99aba=""><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="8" fill="#FF4500"></rect><g clip-path="url(#clip0_5_584)"><path d="M29 20.285a1.97 1.97 0 0 0-3.335-1.416c-1.346-.972-3.202-1.6-5.268-1.67l.898-4.222 2.932.623c.036.746.646 1.34 1.4 1.34.754 0 1.407-.63 1.407-1.407a1.404 1.404 0 0 0-2.665-.623l-3.273-.695a.344.344 0 0 0-.264.05.347.347 0 0 0-.152.22l-1.002 4.71c-2.097.059-3.981.686-5.345 1.67a1.97 1.97 0 1 0-2.168 3.216c-.03.195-.048.394-.048.595 0 3.03 3.528 5.488 7.879 5.488 4.351 0 7.879-2.456 7.879-5.488 0-.2-.016-.396-.046-.592a1.967 1.967 0 0 0 1.17-1.8v.001Zm-13.504 1.408a1.408 1.408 0 1 1 2.814.002 1.408 1.408 0 0 1-2.814-.002Zm7.846 3.717c-.961.96-2.8 1.034-3.341 1.034-.54 0-2.382-.074-3.341-1.034a.364.364 0 0 1 .515-.515c.605.605 1.9.82 2.824.82.925 0 2.22-.215 2.826-.82a.364.364 0 0 1 .515.515h.002Zm-.248-2.31a1.408 1.408 0 0 1 0-2.813 1.408 1.408 0 0 1 0 2.813Z" fill="#fff"></path></g><defs><clipPath id="clip0_5_584"><path fill="#fff" transform="translate(11 12.125)" d="M0 0h18v16.04H0z"></path></clipPath></defs></svg></span></span> <span class="base-svg footer__social-icon footer__social-icon--hover base-svg--icon-reddit-hover base-svg--ltr footer__social-icon--reddit" data-v-33b99aba="" data-v-a53512bc=""><span class="base-svg__icon" style="" data-v-33b99aba=""><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="8" fill="#fff"></rect><g clip-path="url(#clip0_30_2951)"><path d="M29 20.285a1.97 1.97 0 0 0-3.335-1.416c-1.346-.972-3.202-1.6-5.268-1.67l.898-4.222 2.932.623c.036.746.646 1.34 1.4 1.34.754 0 1.407-.63 1.407-1.407a1.404 1.404 0 0 0-2.665-.623l-3.273-.695a.344.344 0 0 0-.264.05.347.347 0 0 0-.152.22l-1.002 4.71c-2.097.059-3.981.686-5.345 1.67a1.97 1.97 0 1 0-2.168 3.216c-.03.195-.048.394-.048.595 0 3.03 3.528 5.488 7.879 5.488 4.351 0 7.879-2.456 7.879-5.488 0-.2-.016-.396-.046-.592a1.967 1.967 0 0 0 1.17-1.8v.001Zm-13.504 1.408a1.408 1.408 0 1 1 2.814.002 1.408 1.408 0 0 1-2.814-.002Zm7.846 3.717c-.961.96-2.8 1.034-3.341 1.034-.54 0-2.382-.074-3.341-1.034a.364.364 0 0 1 .515-.515c.605.605 1.9.82 2.824.82.925 0 2.22-.215 2.826-.82a.364.364 0 0 1 .515.515h.002Zm-.248-2.31a1.408 1.408 0 0 1 0-2.813 1.408 1.408 0 0 1 0 2.813Z" fill="#FF4500"></path></g><defs><clipPath id="clip0_30_2951"><path fill="#fff" transform="translate(11 12.125)" d="M0 0h18v16.04H0z"></path></clipPath></defs></svg></span></span></a><a href="https://www.reddit.com/r/PUBGConsole/" target="_blank" aria-label="reddit-console" class="footer__social-items" data-v-a53512bc=""><span class="base-svg footer__social-icon base-svg--icon-reddit-console base-svg--ltr footer__social-icon--reddit-console" data-v-33b99aba="" data-v-a53512bc=""><span class="base-svg__icon" style="" data-v-33b99aba=""><svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="8" fill="#FF4500"></rect><g clip-path="url(#icon-reddit-console-clip-path-1)"><path d="M29 20.285a1.97 1.97 0 0 0-3.335-1.416c-1.346-.972-3.202-1.6-5.268-1.67l.898-4.222 2.932.623c.036.746.646 1.34 1.4 1.34.754 0 1.407-.63 1.407-1.407a1.404 1.404 0 0 0-2.665-.623l-3.273-.695a.344.344 0 0 0-.264.05.347.347 0 0 0-.152.22l-1.002 4.71c-2.097.059-3.981.686-5.345 1.67a1.97 1.97 0 1 0-2.168 3.216c-.03.195-.048.394-.048.595 0 3.03 3.528 5.488 7.879 5.488 4.351 0 7.879-2.456 7.879-5.488 0-.2-.016-.396-.046-.592a1.967 1.967 0 0 0 1.17-1.8v.001Zm-13.504 1.408a1.408 1.408 0 1 1 2.814.002 1.408 1.408 0 0 1-2.814-.002Zm7.846 3.717c-.961.96-2.8 1.034-3.341 1.034-.54 0-2.382-.074-3.341-1.034a.364.364 0 0 1 .515-.515c.605.605 1.9.82 2.824.82.925 0 2.22-.215 2.826-.82a.364.364 0 0 1 .515.515h.002Zm-.248-2.31a1.408 1.408 0 0 1 0-2.813 1.408 1.408 0 0 1 0 2.813Z" fill="#fff"></path></g><circle cx="34" cy="34" r="8" fill="#fff" stroke="#FF4500" stroke-width="2"></circle><g clip-path="url(#icon-reddit-console-clip-path-2)"><path d="M38.119 31.631a.842.842 0 0 0-.618-.256H30.5a.838.838 0 0 0-.618.256.842.842 0 0 0-.256.618v3.5c0 .241.085.448.256.62a.838.838 0 0 0 .618.256h7a.838.838 0 0 0 .617-.256.842.842 0 0 0 .257-.618V32.25a.838.838 0 0 0-.257-.618h.003Zm-4.556 2.806h-.874v.874h-.873v-.874h-.874v-.874h.874v-.874h.873v.874h.874v.874Zm1.997.684a.633.633 0 0 1-.466.192.637.637 0 0 1-.465-.192.633.633 0 0 1-.192-.465c0-.182.065-.336.192-.466a.633.633 0 0 1 .465-.191c.184 0 .336.064.466.191a.633.633 0 0 1 .191.466.637.637 0 0 1-.191.465Zm1.311-1.311a.633.633 0 0 1-.465.191.637.637 0 0 1-.466-.191.633.633 0 0 1-.191-.466c0-.182.064-.336.191-.465a.633.633 0 0 1 .466-.192c.184 0 .336.065.465.192a.633.633 0 0 1 .192.465.641.641 0 0 1-.192.466Z" fill="#FF4500"></path></g><defs><clipPath id="icon-reddit-console-clip-path-1"><path fill="#fff" transform="translate(11 12.125)" d="M0 0h18v16.04H0z"></path></clipPath><clipPath id="icon-reddit-console-clip-path-2"><path fill="#fff" transform="translate(29.625 31.375)" d="M0 0h8.75v5.25H0z"></path></clipPath></defs></svg></span></span> <span class="base-svg footer__social-icon footer__social-icon--hover base-svg--icon-reddit-console-hover base-svg--ltr footer__social-icon--reddit-console" data-v-33b99aba="" data-v-a53512bc=""><span class="base-svg__icon" style="" data-v-33b99aba=""><svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="8" fill="#fff"></rect><g clip-path="url(#clip0_2962_60242)"><path d="M29 20.285a1.97 1.97 0 0 0-3.335-1.416c-1.346-.972-3.202-1.6-5.268-1.67l.898-4.222 2.932.623c.036.746.646 1.34 1.4 1.34.754 0 1.407-.63 1.407-1.407a1.404 1.404 0 0 0-2.665-.623l-3.273-.695a.344.344 0 0 0-.264.05.347.347 0 0 0-.152.22l-1.002 4.71c-2.097.059-3.981.686-5.345 1.67a1.97 1.97 0 1 0-2.168 3.216c-.03.195-.048.394-.048.595 0 3.03 3.528 5.488 7.879 5.488 4.351 0 7.879-2.456 7.879-5.488 0-.2-.016-.396-.046-.592a1.967 1.967 0 0 0 1.17-1.8v.001Zm-13.504 1.408a1.408 1.408 0 1 1 2.814.002 1.408 1.408 0 0 1-2.814-.002Zm7.846 3.717c-.961.96-2.8 1.034-3.341 1.034-.54 0-2.382-.074-3.341-1.034a.364.364 0 0 1 .515-.515c.605.605 1.9.82 2.824.82.925 0 2.22-.215 2.826-.82a.364.364 0 0 1 .515.515h.002Zm-.248-2.31a1.408 1.408 0 0 1 0-2.813 1.408 1.408 0 0 1 0 2.813Z" fill="#FF4500"></path></g><circle cx="34" cy="34" r="8" fill="#FF4500" stroke="#fff" stroke-width="2"></circle><g clip-path="url(#clip1_2962_60242)"><path d="M38.119 31.631a.842.842 0 0 0-.618-.256H30.5a.838.838 0 0 0-.618.256.842.842 0 0 0-.256.618v3.5c0 .241.085.448.256.62a.838.838 0 0 0 .618.256h7a.838.838 0 0 0 .617-.256.842.842 0 0 0 .257-.618V32.25a.838.838 0 0 0-.257-.618h.003Zm-4.556 2.806h-.874v.874h-.873v-.874h-.874v-.874h.874v-.874h.873v.874h.874v.874Zm1.997.684a.633.633 0 0 1-.466.192.637.637 0 0 1-.465-.192.633.633 0 0 1-.192-.465c0-.182.065-.336.192-.466a.633.633 0 0 1 .465-.191c.184 0 .336.064.466.191a.633.633 0 0 1 .191.466.637.637 0 0 1-.191.465Zm1.311-1.311a.633.633 0 0 1-.465.191.637.637 0 0 1-.466-.191.633.633 0 0 1-.191-.466c0-.182.064-.336.191-.465a.633.633 0 0 1 .466-.192c.184 0 .336.065.465.192a.633.633 0 0 1 .192.465.641.641 0 0 1-.192.466Z" fill="#fff"></path></g><defs><clipPath id="clip0_2962_60242"><path fill="#fff" transform="translate(11 12.125)" d="M0 0h18v16.04H0z"></path></clipPath><clipPath id="clip1_2962_60242"><path fill="#fff" transform="translate(29.625 31.375)" d="M0 0h8.75v5.25H0z"></path></clipPath></defs></svg></span></span></a></span></div>
+            <img src="https://wstatic-prod.pubg.com/web/live/main_f31e0ca/img/6d1bd37.webp" width="214" height="48" alt="PUBG | KRAFTON" usemap="#footer-logo" class="footer__logo-image" data-v-a53512bc="">
+            <div class="footer-section">
+                <h5 class="footer-one">PRIVACY POLICY</h5>
+                <h5>TERMS OF SERVICE</h5>
+                <h5>RULES OFCONDUCT</h5>
+                <h5>CONTENT CREATION</h5>
+                <h5>COOKIE PREFERENCE</h5>
+            </div>
+            <div class="footer-copyright" data-v-a53512bc="">
+             © 2025 KRAFTON, INC. PUBG IS A REGISTERED TRADEMARK OR SERVICE MARK OF KRAFTON, INC.
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <script src="./Script/header.js"></script>
+    <script src="./swipe/Carousel_slider.js"></script>
+</body>
+</html>
