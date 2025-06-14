@@ -4,6 +4,9 @@
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         box-sizing: border-box;
     }
+    html{
+        scroll-behavior: smooth;
+    }
     .main{
         height:100vh;
         min-height:100vh;
@@ -195,6 +198,7 @@
         top:0;
         left:0;
         right:0;
+        z-index:1000;
         justify-content: space-between;
         padding:20px;
     }
@@ -376,4 +380,15 @@
         gap:10px
         ;
     } 
+    }
+    @media screen and (max-width:400px){
+        .right-logo{
+            height:34px;
+        }
+        .lang-dropdown{
+            width:70px;
+        }
+        .right-world-icon{
+            height:20px;
+        }
     }
